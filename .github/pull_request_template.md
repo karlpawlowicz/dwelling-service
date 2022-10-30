@@ -11,7 +11,7 @@
 ## Testing Instructions
 
 1.
-2. Review code
+2. Review code.
 
 ## Checklist
 
