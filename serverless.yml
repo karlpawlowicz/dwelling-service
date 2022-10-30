@@ -20,9 +20,6 @@ provider:
   region: us-east-1
   lambdaHashingVersion: 20201221
 
-package:
-  individually: true
-
 functions:
   api:
     handler: src/main.handler
