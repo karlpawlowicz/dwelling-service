@@ -28,6 +28,7 @@ async function bootstrap(): Promise<Server> {
         new ExpressAdapter(expressApp),
       );
 
+      app.enableCors();
       app.use(eventContext());
       await app.init();
 
