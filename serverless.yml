@@ -1,0 +1,37 @@
+service: dwelling-service
+
+useDotenv: true
+
+plugins:
+  - serverless-plugin-typescript
+  - serverless-apigw-binary
+  - serverless-offline
+  - serverless-plugin-optimize
+
+custom:
+  apigwBinary:
+    types:
+      - multipart/form-data
+
+provider:
+  name: aws
+  runtime: nodejs16.x
+  stage: ${opt:stage, 'dev'}
+  region: us-east-1
+  lambdaHashingVersion: 20201221
+
+package:
+  individually: true
+
+functions:
+  api:
+    handler: src/main.handler
+    timeout: 30
+    events:
+      - http:
+          path: /
+          method: ANY
+      - http:
+          path: /{proxy+}
+          method: ANY
+    url: true
