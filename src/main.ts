@@ -2,6 +2,7 @@ import { Server } from 'http';
 import { NestFactory } from '@nestjs/core';
 import { ExpressAdapter } from '@nestjs/platform-express';
 import { eventContext } from 'aws-serverless-express/middleware';
+import { ValidationPipe } from '@nestjs/common';
 import { createServer, proxy } from 'aws-serverless-express';
 import { Context, Handler } from 'aws-lambda';
 
@@ -30,6 +31,7 @@ async function bootstrap(): Promise<Server> {
 
       app.enableCors();
       app.use(eventContext());
+      app.useGlobalPipes(new ValidationPipe());
       await app.init();
 
       cachedServer = createServer(expressApp, undefined, binaryMimeTypes);
