@@ -3,10 +3,10 @@ import { Injectable } from '@nestjs/common';
 @Injectable()
 export class BalancesService {
   findOne(cardNumber: string) {
-    let balance = 0;
+    let value = 0;
 
     if (cardNumber[15] === '2' || cardNumber[15] === '5') {
-      balance = cardNumber
+      value = cardNumber
         .split('')
         .reduce(
           (previousValue, currentValue) =>
@@ -15,6 +15,6 @@ export class BalancesService {
         );
     }
 
-    return { currentBalance: { usd: balance } };
+    return { cardNumber, currentBalance: { currency: 'USD', value } };
   }
 }
