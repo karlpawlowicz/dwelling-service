@@ -1,6 +1,7 @@
 ## Description
 
 [Front-End Repo](https://github.com/karlpawlowicz/dwelling-app)
+
 [Sample Request](https://gf8ssmidyg.execute-api.us-east-1.amazonaws.com/prod/balances/1409348423420002)
 
 ### Process
@@ -11,14 +12,14 @@ Once I understood what I was building, I would draft a proposal in a design doc 
 
 This exercise required JavaScript and REST, so I built a Nest (TypeScript) app on AWS (Lambda).
 
-I added a CI/CD pipeline using GitHub Actions that lints, tests, builds, and deploys the app as a Lambda function to AWS on each push.
+I added a CI/CD pipeline using GitHub Actions to lint, test, build, and deploy the app as a Lambda function to AWS on each push.
 
 ### Sample PRs
 
-- [https://github.com/karlpawlowicz/dwelling-service/pull/1](feat: add serverless deployment enhancement)
-- [https://github.com/karlpawlowicz/dwelling-service/pull/3](feat: add balances resource)
-- [https://github.com/karlpawlowicz/dwelling-service/pull/4](fix: add card number)
-- [https://github.com/karlpawlowicz/dwelling-service/pull/5](fix: fix balance calculation)
+- https://github.com/karlpawlowicz/dwelling-service/pull/1
+- https://github.com/karlpawlowicz/dwelling-service/pull/3
+- https://github.com/karlpawlowicz/dwelling-service/pull/4
+- https://github.com/karlpawlowicz/dwelling-service/pull/5
 
 ### If I Had More Time
 
@@ -26,7 +27,7 @@ I added a CI/CD pipeline using GitHub Actions that lints, tests, builds, and dep
 - CORS
 - Database—store cards in DynamoDB or Postgres
 - More tests—unit and e2e
-- Observability—improve the logs sent to CloudWatch
+- Observability—improve logs sent to CloudWatch
 - Preview environments—each branch should have a preview URL (currently only dev and prod environment)
 
 ## Installation
