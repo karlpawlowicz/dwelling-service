@@ -7,6 +7,7 @@ export class BalancesService {
 
     if (cardNumber[15] === '2' || cardNumber[15] === '5') {
       value = cardNumber
+        .substr(0, 12)
         .split('')
         .reduce(
           (previousValue, currentValue) =>
