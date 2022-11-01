@@ -5,11 +5,11 @@
 
 ### Process
 
-I began by reviewing the brief and requirements. In a real-world setting, at this stage, I would have had discussions with various stakeholders, such as an engineering and product manager.
+I began by reviewing the brief and requirements. In a real-world setting, at this stage, I would have discussions with various stakeholders, such as an engineering and product manager.
 
 Once I understood what I was building, I would draft a proposal in a design doc or RFC.
 
-This exercise required to use JavaScript and REST, so I built a Nest (TypeScript) app on AWS (Lambda).
+This exercise required JavaScript and REST, so I built a Nest (TypeScript) app on AWS (Lambda).
 
 I added a CI/CD pipeline using GitHub Actions that lints, tests, builds, and deploys the app as a Lambda function to AWS on each push.
 
